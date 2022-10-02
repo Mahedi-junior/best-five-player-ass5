@@ -22,7 +22,8 @@ function playerList(playerName) {
 function getInputValueById(inputId) {
     const inputField = document.getElementById(inputId);
     const inputFieldString = inputField.value;
-    const inputValue = parseFloat(inputFieldString)
+    const inputValue = parseFloat(inputFieldString);
+
     if (isNaN(inputValue)) {
         alert('Input Field Should not be string or Blank')
         return 0
@@ -32,7 +33,6 @@ function getInputValueById(inputId) {
 // Common Function for All Total Set
 function setTotalTextById(elementId, total) {
     const TotalTextElement = document.getElementById(elementId);
-
     TotalTextElement.innerText = total;
 }
 let playerCount;
@@ -50,9 +50,11 @@ document.getElementById('players').addEventListener('click', function (e) {
 document.getElementById('player-btn').addEventListener('click', function (e) {
     const perPlayerBudget = getInputValueById('player-budget')
     playerExpense = perPlayerBudget * playerCount;
+
     if (isNaN(playerExpense)) {
         return 0
     }
+
     setTotalTextById('player-expense', playerExpense)
 })
 

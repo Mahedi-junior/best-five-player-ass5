@@ -9,9 +9,7 @@
 
 }
 
-main {
-    background-color: rgb(43, 42, 42);
-}
+
 
 
 .title h1 {
@@ -38,7 +36,7 @@ main {
 }
 
 .selected-player {
-    background-color: #171717;
+    background-color: #000000;
     border-radius: 10px;
     width: 264px;
     height: 351px;
@@ -48,4 +46,8 @@ main {
     background-color: #000000;
     border-radius: 10px;
     width: 274px;
+}
+
+footer {
+    background-color: #0b0b0b;
 }
