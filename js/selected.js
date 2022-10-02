@@ -6,10 +6,21 @@ function playerList(playerName) {
 
     const playerContainer = document.getElementById("select-player-list");
     const li = document.createElement("li");
-    li.innerText = playerName;
-
+    li.innerText = "" + playerName;
+    li.classList.add("singlePlayer");
     playerContainer.appendChild(li);
-    // console.log(playerName);
+
+    const player = document.querySelectorAll(".singlePlayer");
+    const playerCount = player.length;
+
+    if (playerCount > 5) {
+        alert("You added maximum Players");
+        playerContainer.removeChild(li);
+        return;
+    }
+    return playerCount;
+
+
 }
 
 
