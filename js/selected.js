@@ -1,5 +1,8 @@
+let playerCount;
+
 function playerList(playerName) {
-    if (playerName == '') {
+    // console.log(playerName);
+    if (playerName == " ") {
         alert('Already added');
         return;
     }
@@ -8,28 +11,47 @@ function playerList(playerName) {
     const li = document.createElement("li");
     li.innerText = "" + playerName;
     li.classList.add("singlePlayer");
+
     playerContainer.appendChild(li);
 
     const player = document.querySelectorAll(".singlePlayer");
-    const playerCount = player.length;
+    console.log(player.length);
+    playerCount = player.length;
+    // console.log(playerCount)
 
     if (playerCount > 5) {
         alert("You added maximum Players");
         playerContainer.removeChild(li);
-        return;
+        return 5;
     }
     return playerCount;
-
-
 }
+
 
 
 document.getElementById("players").addEventListener("click", function (event) {
     const playerName = event.target.parentNode.childNodes[1].innerText;
-    console.log(event.target);
+
     event.target.setAttribute("disabled", true);
-    // console.log(event.target.parentNode.childNodes);
+    //
+    // const player = playerList(playerName);
+    // console.log(player);
+    // 
     playerList(playerName);
+
+})
+
+
+// Calculation
+document.getElementById("player-btn").addEventListener("click", function () {
+    const playerBudget = document.getElementById("player-budget");
+    const playerBudgetString = playerBudget.value;
+    const previousBudget = parseFloat(playerBudgetString);
+
+    const player = playerList()
+    console.log(playerCount);
+    const total = player * previousBudget;
+    // console.log(total);
 
 })
 
