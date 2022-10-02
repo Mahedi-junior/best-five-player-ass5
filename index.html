@@ -204,7 +204,7 @@
                             class="py-2 fw-bolder bg-primary border-0 text-white my-2">Calculate</button>
                         <div class="d-flex justify-content-between fw-semibold fs-6">
                             <p>playerExpenses </p>
-                            <p>$<span>00</span></p>
+                            <p>$<span id="player-expense">00</span></p>
                         </div>
 
                         <div class="col-4">
@@ -212,7 +212,7 @@
                         </div>
 
                         <div class="col-8 mb-2">
-                            <input type="text" id="" class="form-control bg-dark text-white"
+                            <input id="manager-field" type="text" class="form-control bg-dark text-white"
                                 aria-describedby="passwordHelpInline">
                         </div>
 
@@ -221,13 +221,18 @@
                         </div>
 
                         <div class="col-8 mb-2">
-                            <input type="text" id="" class="form-control bg-dark text-white"
+                            <input id="coach-field" type="text" class="form-control bg-dark text-white"
                                 aria-describedby="passwordHelpInline">
                         </div>
 
-                        <button class=" py-2 fw-bolder bg-primary border-0 text-white">Calculate Total</button>
+                        <button id="total-calculate" class=" py-2 fw-bolder bg-primary border-0 text-white">Calculate
+                            Total</button>
 
-                        <p>Total <span>00</span></p>
+                        <div class="d-flex justify-content-between fw-semibold fs-4 mt-3">
+                            <p>Total </p>
+                            <p>$<span id="totalExpense">00</span></p>
+                        </div>
+                        <!-- <p>Total <span id="totalExpense">00</span></p> -->
                     </div>
                 </div>
             </div>
